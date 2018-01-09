@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 sleep 5
 
 cd /home/container
