@@ -1,19 +1,13 @@
-# ----------------------------------
-# Pterodactyl Core Dockerfile
-# Environment: Mono
-# Minimum Panel Version: 0.6.0
-# ----------------------------------
 FROM        alpine:edge
 
-MAINTAINER  Pterodactyl Software, <support@pterodactyl.io>
+MAINTAINER  Daave, <daave@hitler.rocks>
 
 RUN         apk update \
             && apk upgrade \
-            && echo "http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
             && apk update \
-            && apk add --no-cache mono openssl curl \
+            && apk add --no-cache mono --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
             && adduser -D -h /home/container container
-
+RUN 
 USER        container
 ENV         HOME=/home/container USER=container
 WORKDIR     /home/container
