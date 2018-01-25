@@ -4,7 +4,6 @@ MAINTAINER  Daave, <daave@hitler.rocks>
 
 RUN         apk update \
             && apk upgrade \
-            && apk update \
             && apk add --no-cache mono --repository http://dl-cdn.alpinelinux.org/alpine/edge/testing \
             && adduser -D -h /home/container container
 RUN 
