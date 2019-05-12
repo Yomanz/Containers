@@ -9,7 +9,4 @@ MODIFIED_STARTUP=`eval echo $(echo ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g'
 echo ":/home/container$ ${MODIFIED_STARTUP}"
 
 # Run the Server
-sampctl server ensure
-sampctl server build
-
 ${MODIFIED_STARTUP}
